@@ -15,6 +15,10 @@ app.get("/contact", (req, res) => {
     res.send("This is Contact Page");
 })
 
+app.get("/user/:name", (req, res) => {
+    res.send(`Hello ${req.params.name}`);
+})
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}...`);
 })
